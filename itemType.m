@@ -1,7 +1,7 @@
 
 function [index, type] = itemType(itemID,itemWID,itemFID,npcID)
 % ITEMTYPE: determines the item type of an object the player bumps into
-% see dependency report for input output
+
 id = uint16(itemID) + 1
 itemWID = itemWID+1
 itemFID = itemFID+1

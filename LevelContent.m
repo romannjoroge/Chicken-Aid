@@ -1,5 +1,5 @@
 % Loads all level content in the game
-% see dependency report for input output
+
 ATTACK = false; % used to check whether or not a player is attack or being attacked
 genericFreq = [1, 1, 1, 1, 1, 1];
 genericType = [" "," "," "," "];

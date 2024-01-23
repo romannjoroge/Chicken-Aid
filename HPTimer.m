@@ -1,5 +1,5 @@
 % Timer that takes off 5 HP ever 5 moves
-% see dependency report for input output
+
 HPtimer = HPtimer + 1;
 if HPtimer == 5
     PHealthPoint=PHealthPoint-5;

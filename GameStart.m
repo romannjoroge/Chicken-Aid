@@ -1,5 +1,5 @@
 % START GAME
-% see dependency report for input output
+
 clear
 clc
 play = questdlg("Do you want to play?",'Chicken Aid', "Yes",...
