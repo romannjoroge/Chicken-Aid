@@ -1,10 +1,11 @@
 %Initializes game board
-% see dependency report for input output
+
 %% Initializing GBoard
 % plays music
-[y,f] = audioread('rainforest_ambience-GlorySunz.wav');
+[y,f] = audioread('bien-lifestyle.mp3');
 forest = audioplayer(y,f);
 forest.play;
+
 % Creates the board
 grass = imread('All_Sprites_PNG\grass_texture.png');
 Gboard = cell(10,15);

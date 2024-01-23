@@ -1,5 +1,4 @@
 % End Screen for wins and losses
-% see dependency report for input output
 
 if(sum(double(char(forest.Running))) == sum(double(char('off'))))
    forest.play;

@@ -1,6 +1,6 @@
 %% Player Movement/ UI
 % prow and pcol always equals to the current location of player
-% see dependency report for input output
+
 [prow, pcol] = find(Mboard==sum(double('player')));
 Pposition = [prow, pcol];
 ed = false; % if ed is true, end game

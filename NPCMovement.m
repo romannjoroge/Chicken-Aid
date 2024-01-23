@@ -1,5 +1,5 @@
 % The movement/AI of NPC's
-% see dependency report for input output
+
 % 4 types of attackers: swarmer, picker,nester, tank
 [nrow, ncol] = find(Mboard==nID);
 npos = cell(1,length(nrow'));

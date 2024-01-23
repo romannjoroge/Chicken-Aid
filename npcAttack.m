@@ -1,5 +1,4 @@
 % ALL NPC attacks
-% see dependency report for input output
 [index, ~] = itemType(nID, [0,0], [0,0], npcID)
 PHealthPoint = Fightscrn(npcList(index), PHealthPoint, npcHP(index), npcATk(index), inventoryW,level,...
   npcList,itemListW, itemWhit, npcHP,npcATk);

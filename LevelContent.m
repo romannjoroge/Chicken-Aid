@@ -1,10 +1,10 @@
 % Loads all level content in the game
-% see dependency report for input output
+
 ATTACK = false; % used to check whether or not a player is attack or being attacked
 genericFreq = [1, 1, 1, 1, 1, 1];
 genericType = [" "," "," "," "];
 playerID = sum(double(char('player')));
-player = imread('All_Sprites_PNG\temp_chick.png');
+player = imread('All_Sprites_PNG\player.png');
 if (level == 1)
     itemListW = ["Rock", "Flash", "keys", "knife"];
     itemWPic = loadSprite(itemListW, 'W', level);
