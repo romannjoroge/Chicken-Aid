@@ -1,15 +1,24 @@
 %% Player Movement/ UI
 % prow and pcol always equals to the current location of player
 
+% Find position of player on board
 [prow, pcol] = find(Mboard==sum(double('player')));
+
 Pposition = [prow, pcol];
 ed = false; % if ed is true, end game
 oldLevel = level;
 while ed == false
+
+    % Focus window
     h=figure(1);
+
+    % Wait for a button to be pressed
     waitforbuttonpress
+
+    % Get the pressed button
     move = get(h, 'CurrentKey');
     if(move ~= 0)
+        % Store previous position
         oldposition = Pposition;
      
         inventoryW
@@ -17,8 +26,13 @@ while ed == false
             case 'uparrow'
                 setBehavior
                 prow = prow-1;
+
+                % Get new player position
                 [prow,pcol] = OutOfBounds(prow, pcol,oldposition(1),oldposition(2), "player", Mboard);
                 Pposition = [prow, pcol];
+
+                % Get type of item and index of item at new players
+                % location
                 [index, ptype]=itemType(Mboard(prow,pcol),itemWID,itemFID,npcID);
                 if (Mboard(prow,pcol) == playerID)
                     continue;

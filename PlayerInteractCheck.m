@@ -1,4 +1,5 @@
-% Controls all player interactions with gameboard
+% Controls all player interactions with gameboard, how player interacts
+% with NPCs, food and weapons
 
 PHealthPoint;
 if(ptype=='N' && Mboard(prow, pcol)~= 0 && Mboard(prow,pcol) ~= playerID)
@@ -19,6 +20,7 @@ if(ptype=='N' && Mboard(prow, pcol)~= 0 && Mboard(prow,pcol) ~= playerID)
 elseif(ptype == 'W'&& Mboard(prow, pcol)~= 0 && Mboard(prow,pcol) ~= playerID) %Weapons
     ATTACK = false;
     %given the ID number that we find on Mboard, I would find the position
+    % Pick up weapon
     inventoryW(index) = itemListW(itemWID==Mboard(prow,pcol)); % inventory update
     [Mboard, Gboard] = moveplayer(Pposition, Mboard, Gboard, player, playerID, "player");
     [Mboard, Gboard] = deleteOldPos(oldposition,Mboard, Gboard, grass);

@@ -5,6 +5,8 @@ function [Mboard, Gboard]= moveplayer (Pposition, mboard, gboard, player, player
 
 if(type== "player")
 [oldposition1,oldposition2] = find(mboard==playerID);
+
+% Move player and get new position
 [Pposition(1), Pposition(2)] = OutOfBounds(Pposition(1), Pposition(2),oldposition1,oldposition2, type , mboard);
 end
 mboard(Pposition(1), Pposition(2)) = playerID; % sum(double('player')) = PLAYERID

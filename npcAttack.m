@@ -1,5 +1,6 @@
 % ALL NPC attacks
 [index, ~] = itemType(nID, [0,0], [0,0], npcID)
+% Display fight options and get the new HP of player
 PHealthPoint = Fightscrn(npcList(index), PHealthPoint, npcHP(index), npcATk(index), inventoryW,level,...
   npcList,itemListW, itemWhit, npcHP,npcATk);
 if(PHealthPoint<=0)

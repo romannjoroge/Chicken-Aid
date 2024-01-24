@@ -1,8 +1,12 @@
 % The movement/AI of NPC's
 
 % 4 types of attackers: swarmer, picker,nester, tank
+
+% Find position of item with ID nID
 [nrow, ncol] = find(Mboard==nID);
 npos = cell(1,length(nrow'));
+
+
 for i = 1: length(nrow')
     npos{i} = [nrow(i), ncol(i)];
 end
@@ -11,7 +15,7 @@ npic = itemNPCPic{1,npcID==nID};
 % Now atkStyle:
 switch atkStyle
     case "swarmer" % hornets
-        %TODO: swarmers get stuck and stop moving, and also jumps
+        
         for d = 1: length(npos) % moves every activeNPC type
             % Moves row
             nPosOld = [npos{d}(1),npos{d}(2)];
@@ -37,8 +41,10 @@ switch atkStyle
                     [npos{d}(1),npos{d}(2)] = OutOfBounds(npos{d}(1),tempNcol,npos{d}(1),npos{d}(2), "NPC", Mboard);% if out of bounds, address does not change
                 end
             end
+            % Attack player if NPCs new position is same as player position
                 if Mboard(npos{d}(1),npos{d}(2)) == playerID
                     npcAttack;%attacks player
+                    % Delete NPC
                     [Mboard, Gboard] = deleteOldPos(nPosOld,Mboard, Gboard, grass);
                     
                 end

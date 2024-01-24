@@ -31,6 +31,8 @@ if level >= 1
 %(itemName, row, col, board)
 Mboard = InputMBoard('finalbloc', 1, 15, Mboard);
 end
+
+% Displays game board
 loadGB(Gboard);
 if(level == 1)
     l1mission = msgbox("Mega Toad: Hey! You, chicken! Listen up, I'll let you out of this part of the forest if you give me back the key I lost.",...
